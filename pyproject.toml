@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "itscrub"
+version = "0.1.0"
+description = "Find and mask Italian personal data (codice fiscale, partita IVA, IBAN, PEC, phone numbers, plates) in logs and source code."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Nicola Valigi" }]
+keywords = ["gdpr", "pii", "privacy", "codice-fiscale", "partita-iva", "iban", "logging", "pre-commit"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Security",
+    "Natural Language :: Italian",
+]
+
+[project.urls]
+Homepage = "https://github.com/nicolavaligi/italian-pii-scrubber"
+
+[project.scripts]
+itscrub = "itscrub:main"
+
+[tool.setuptools]
+py-modules = ["itscrub"]

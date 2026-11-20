@@ -1,0 +1,6 @@
+- id: itscrub
+  name: itscrub (Italian personal data)
+  description: Blocks commits that add codice fiscale, partita IVA, IBAN, e-mail/PEC addresses or phone numbers.
+  entry: itscrub scan
+  language: python
+  types: [text]
