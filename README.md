@@ -184,6 +184,27 @@ The stack is deliberately plain Python standard library: a hook that runs on
 every commit must install instantly and start fast, and a privacy tool is
 easier to trust when it is one readable file with no dependencies to audit.
 
+## Prova rapida in italiano
+
+Maschera una riga di log con dati fittizi. Servono Git e Python 3.9 o superiore.
+
+```bash
+git clone https://github.com/nicolavaligi/italian-pii-scrubber.git
+cd italian-pii-scrubber
+printf '%s\n' 'login RSSMRA80A01H501U da mario.rossi@posta.example, cell +39 333 1234567' |
+  python3 itscrub.py mask
+```
+
+Risultato:
+
+```text
+login [CODICE_FISCALE] da [EMAIL], cell [TELEFONO]
+```
+
+Hai trovato un formato italiano che sfugge al controllo o un falso positivo?
+[Apri una issue](https://github.com/nicolavaligi/italian-pii-scrubber/issues/new)
+con un esempio fittizio e il risultato atteso.
+
 ## In breve (italiano)
 
 `itscrub` trova e maschera i dati personali italiani — codice fiscale, partita
